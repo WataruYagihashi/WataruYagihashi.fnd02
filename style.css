@@ -1,7 +1,7 @@
 /* まず、style.cssにこのルールを書き入れてください。 */
 
 body {
-    background-image: url(image.png);
+    background-image: url(img/image.png);
     background-repeat: no-repeat; 
     background-position: top center; 
     background-size: cover; 
@@ -129,7 +129,7 @@ h1 {
     width: 270px;
     height: 170px;
     margin: 20px 0px 0px 500px;
-    background-image: url("b97d1e4373b818905a1ce943ab79e431_t.jpeg");
+    background-image: url("img/b97d1e4373b818905a1ce943ab79e431_t.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50px;
@@ -145,7 +145,7 @@ h1 {
     width: 270px;
     height: 170px;
     margin: 20px 0px 0px 400px;
-    background-image: url("45295d2033019aaffc879f5fed38c8ed_t.jpeg");
+    background-image: url("img/45295d2033019aaffc879f5fed38c8ed_t.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50px;
@@ -162,7 +162,7 @@ h1 {
     width: 500px;
     height: 200px;
     margin: 0px 0px 0px 600px;
-    background-image: url("あなたの負け.png");
+    background-image: url("img/あなたの負け.png");
     background-size: cover;
     background-repeat: no-repeat;
     border: none;
@@ -172,7 +172,7 @@ h1 {
     width: 500px;
     height: 200px;
     margin: 0px 0px 0px 600px;
-    background-image: url("あなたの勝ち.png");
+    background-image: url("img/あなたの勝ち.png");
     background-size: cover;
     background-repeat: no-repeat;
     border: none;
@@ -181,7 +181,7 @@ h1 {
 #retry {
     width: 270px;
     height: 170px;
-    background-image: url("RETRY.png");
+    background-image: url("img/RETRY.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50px;
