@@ -1,13 +1,11 @@
 'use strict'
 // 1行目に記載している 'use strict' は削除しないでください
-
 const myCards = []; //自分の手札のオブジェクトが入った配列
 const cpuCards = [];//CPUの手札のオブジェクトが入った配列
 let myHandResult = "";//自分の手札の役
 let cpuHandResult = "";//相手の手札の役
 let myStrongest = 0;//自分の手札の一番強い数字
 let cpuStrongest = 0;//相手の手札の一番強い数字
-
 // 役の強さ配列
 const handRanks = {
     "ハイカード": 1,
@@ -17,7 +15,6 @@ const handRanks = {
     "フルハウス": 5,
     "フォーカード": 6
 }
-
 // 手札の強さと競う数字を返す関数
 function judge(cards) {
     const indices = cards.map(c => c.index).sort((a, b) => a - b); //indices = カード強さを小さい順に並べた配列
@@ -73,8 +70,6 @@ function judge(cards) {
     }
     return { role, strongestNum, indices };
 }
-
-
 function compareHands(hand1, hand2) {
     // 役の強さ比較
     if (handRanks[hand1.role] > handRanks[hand2.role]) {
@@ -101,20 +96,17 @@ function compareHands(hand1, hand2) {
     }
     return 0;
 }
-
-
 // トランプ配列=>オブジェクト  スペード0, ダイヤ1, ハート2,　クローバー3,  supe2.png = "0:2"  supe1.png = "A:14"
 const torannpu = [
-    ["supe2.png", "supe3.png", "supe4.png", "supe5.png", "supe6.png", "supe7.png", "supe8.png", "supe9.png", "supe10.png",
-        "supe11.png", "supe12.png", "supe13.png", "supe1.png"],
-    ["daiya2.png", "daiya3.png", "daiya4.png", "daiya5.png", "daiya6.png", "daiya7.png", "daiya8.png", "daiya9.png", "daiya10.png",
-        "daiya11.png", "daiya12.png", "daiya13.png", "daiya1.png"],
-    ["hat2.png", "hat3.png", "hat4.png", "hat5.png", "hat6.png", "hat7.png", "hat8.png", "hat9.png", "hat10.png", "hat11.png",
-        "hat12.png", "hat13.png", "hat1.png"],
-    ["kura2.png", "kura3.png", "kura4.png", "kura5.png", "kura6.png", "kura7.png", "kura8.png", "kura9.png", "kura10.png",
-        "kura11.png", "kura12.png", "kura13.png", "kura1.png"]
+    ["img/supe2.png", "img/supe3.png", "img/supe4.png", "img/supe5.png", "img/supe6.png", "img/supe7.png", "img/supe8.png", "img/supe9.png", "img/supe10.png",
+        "img/supe11.png", "img/supe12.png", "img/supe13.png", "img/supe1.png"],
+    ["img/daiya2.png", "img/daiya3.png", "img/daiya4.png", "img/daiya5.png", "img/daiya6.png", "img/daiya7.png", "img/daiya8.png", "img/daiya9.png", "img/daiya10.png",
+        "img/daiya11.png", "img/daiya12.png", "img/daiya13.png", "img/daiya1.png"],
+    ["img/hat2.png", "img/hat3.png", "img/hat4.png", "img/hat5.png", "img/hat6.png", "img/hat7.png", "img/hat8.png", "img/hat9.png", "img/hat10.png", "img/hat11.png",
+        "img/hat12.png", "img/hat13.png", "img/hat1.png"],
+    ["img/kura2.png", "img/kura3.png", "img/kura4.png", "img/kura5.png", "img/kura6.png", "img/kura7.png", "img/kura8.png", "img/kura9.png", "img/kura10.png",
+        "img/kura11.png", "img/kura12.png", "img/kura13.png", "img/kura1.png"]
 ]
-
 // スタートボタン関数
 function fun() {
     myCards.length = 0;
@@ -139,7 +131,6 @@ function fun() {
         img.className = "uraCard";
         cardContainer.appendChild(img);
     }
-  
     //////////////////////////////////////////////////////////////
     //自分の手札///////////////////////////////////////////////////
     const my = document.createElement("span")
@@ -154,17 +145,14 @@ function fun() {
     cardContainer2.id = "cardContainer2";
     document.body.appendChild(cardContainer2);
     ///////////////////////////////////////////////////////////////////
-  
     //勝負ボタン作成//
     let matchbutton = document.createElement("button")
     matchbutton.id = "match"
     document.body.appendChild(matchbutton)
-  
     //変更ボタン作成//
     let changebutton = document.createElement("button")
     changebutton.id = "change"
     document.body.appendChild(changebutton)
-  
     //自分の手札ランダム(5枚)
     while (myCards.length < 5) {
         const arrRandom = Math.floor(Math.random() * 4);
@@ -173,7 +161,6 @@ function fun() {
             myCards.push({ suit: arrRandom, index: randomNum });  //suit: 柄; index: 強さ; 
         }
     }
-  
     //小さい順に並べる(sort)
     myCards.sort((a, b) => a.index - b.index);
     for (let i = 0; i < myCards.length; i++) {
@@ -182,14 +169,12 @@ function fun() {
         img2.id = "img2"
         img2.src = cardSet[myCards[i].index];
         img2.className = "omoteCard";
-      
         // クリックで選択・解除できるように設定
         img2.addEventListener("click", () => {
             img2.classList.toggle("selected");
         });
         cardContainer2.appendChild(img2);
     }
-  
     //手札関数を呼び出し、代入
     const myJudge = judge(myCards);
     myHandResult = myJudge.role;
@@ -275,7 +260,6 @@ function fun() {
             myYaku.innerText = `${myStrongest + 2}の${myHandResult}`;
         }
     }
-  
     // 勝負ボタン関数
     function fun2() {
         cpuCards.length = 0;
@@ -346,7 +330,8 @@ function fun() {
         document.body.appendChild(retry)
         retry.addEventListener("click", () => location.reload());
     };
-  
+
+
     matchbutton.addEventListener("click", fun2)
     changebutton.addEventListener("click", fun3)
 }
