@@ -1,0 +1,204 @@
+/* まず、style.cssにこのルールを書き入れてください。 */
+
+body {
+    background-image: url(image.png);
+    background-repeat: no-repeat; 
+    background-position: top center; 
+    background-size: cover; 
+    margin: 0; 
+    height: 100vh; 
+
+}
+
+
+h1 {
+    max-width: auto;        
+    text-align: center;
+    padding: 40px;
+    margin: 0px auto;
+    font-size: 150px;
+}
+
+
+.red {
+    color: red;
+    text-shadow: 0 0 50px #000000, 0 0 50px #000000;
+
+}
+.brack {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 50px #ffffff, 0 0 50px #ffffff;
+
+}
+
+#button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 70px;
+    font-size: 100px;
+    font-weight: 800;
+    color: #FFD700; 
+    background: linear-gradient(145deg, #1a1a1a, #333333);
+    border: 3px solid #FFD700;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #FFD700, inset 0 0 10px #FFD700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+#button:hover {
+    box-shadow: 0 0 20px 5px #FFD700, inset 0 0 20px #FFD700;
+    transform: translate(-50%, -50%) scale(1.05);
+    transition: all 0.3s ease;
+}
+
+
+.yaku {
+    text-decoration: underline;
+    font-size: 50px;
+    padding: 0px 0px 0px 300px;
+    text-shadow: 0 0 30px #ffffff, 0 0 30px #ffffff;
+    color: black;
+}
+
+#mydiv {
+    margin: 0px 0px 0px 200px;
+    padding: 10px 30px;
+    font-size: 50px;
+    color: #FFD700;
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    display: inline-block;
+
+}
+
+#youdiv { 
+    margin: 10px 0px 0px 200px;
+    padding: 10px 30px;
+    font-size: 50px;
+    color: #FFD700;
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    display: inline-block;
+}
+
+
+#uraimg {
+    width: 150px;
+    height: 200px;
+}
+
+
+
+#cardContainer {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin: 10px 0px;
+}
+
+.uraCard {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;
+}
+
+#cardContainer2 {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    margin: 10px 0px;
+}
+.omoteCard {
+    width: 200px;
+    height: 250px;
+    object-fit: contain;   
+    cursor: pointer;
+    margin: 3px;
+}
+
+.selected {
+    outline: 5px solid yellow;
+    cursor: pointer;
+}
+
+
+#match {
+    width: 270px;
+    height: 170px;
+    margin: 20px 0px 0px 500px;
+    background-image: url("b97d1e4373b818905a1ce943ab79e431_t.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 20px 20px 10px black;
+}
+#match:hover {
+    box-shadow: 0px 0px 0px black;
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+}
+#change {
+    width: 270px;
+    height: 170px;
+    margin: 20px 0px 0px 400px;
+    background-image: url("45295d2033019aaffc879f5fed38c8ed_t.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 20px 20px 10px black;
+}
+#change:hover {
+    box-shadow: 0px 0px 0px black;
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+}
+
+#lose {
+    width: 500px;
+    height: 200px;
+    margin: 0px 0px 0px 600px;
+    background-image: url("あなたの負け.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+
+}
+#win {
+    width: 500px;
+    height: 200px;
+    margin: 0px 0px 0px 600px;
+    background-image: url("あなたの勝ち.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#retry {
+    width: 270px;
+    height: 170px;
+    background-image: url("RETRY.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 20px 20px 10px black;
+}
+
+#retry:hover {
+    box-shadow: 0px 0px 0px black;
+    transform: translateY(6px);
+    transition: all 0.3s ease;
+}
+
+#img2:hover {
+    box-shadow: 0px 0px 0px black;
+    transform: translateY(-6px);
+    transition: all 0.3s ease;
+}
+
+
